@@ -1,11 +1,11 @@
-
-//layout setups
-@import 'layout/setups';
-@import 'layout/fonts';
-
 //mixins
 @import 'helpers/mixins';
 
-//blocks
-@import 'blocks/**/*.scss'
 
+//layout setups
+@import 'layout/fonts';
+@import 'layout/setups';
+
+//blocks
+@import 'blocks/**/*.scss';
+@import 'components/**/*.scss';

@@ -28,3 +28,44 @@
         clear: both;
     }
 }
+
+//PC
+@mixin desktop{
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+//laptop
+@mixin laptop{
+    @media screen and (max-width: 991px){
+        @content;
+    }
+}
+//tablets
+@mixin tablet{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+@mixin mintablet{
+    @media screen and (max-width: 650px){
+        @content;
+    }
+}
+//phones
+@mixin phone{
+    @media screen and (max-width: 575px){
+        @content;
+    }
+}
+//minphones
+@mixin minphone{
+    @media screen and (max-width: 417px){
+        @content;
+    }
+}
+@mixin minphones{
+    @media screen and (max-width: 400px){
+        @content;
+    }
+}

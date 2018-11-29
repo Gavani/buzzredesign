@@ -2,10 +2,23 @@ html, body{
     height: 100%;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    @include lato;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.42
+    line-height: 1.42;
+    color: #252525;
+    @include desktop{
+        font-size: 15px;
+    }
+    @include laptop{
+        font-size: 14px;
+    }
+    @include tablet{
+        font-size: 12px;
+    }
+    @include phone{
+        font-size: 12px;
+    }
 }
 
 .wrapper{
@@ -29,4 +42,29 @@ h1, h2, h3, h4, h5{
 
 *{
     box-sizing: border-box;
+}
+.container__fluid{
+    width: 1150px;
+    margin: 0 auto;
+
+    @include desktop{
+        width: 950px;
+    }
+    @include laptop{
+        width: 720px;
+    }
+    @include tablet{
+        width: 90%;
+    }
+}
+.container{
+    width: 765px;
+    margin: 0 auto;
+    @include tablet{
+        width: 90%;
+    }
+}
+
+button, input, a{
+    outline: none;
 }
