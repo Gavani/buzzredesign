@@ -1,0 +1,72 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Buzzguide - Rankings Start Page";
+  
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.rankings-individual__breadcrumbs
+    .container__fluid
+      ul.rankings__breadcrumbs-list
+        li.rankings__breadcrumbs-item
+          a(href="#").rankings__breadcrumbs-link Product Rankings 
+          span.rankings__breadcrumbs-devide >>
+        li.rankings__breadcrumbs-item.rankings__breadcrumbs-item_active
+          span.rankkings__breadcrumbs-span Laptops
+      .rankings__filter
+        select.rankings__filter-select
+          option(value="Filter By Brand") Filter By Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+      label.nav__seach-label.ranking-individual__search
+        input(type="search", name="search", placeholder='Search in laptops ')
+        span.nav__search-icon 
+          i(class="fas fa-search")
+      .rankings__alert
+        select.rankings__alert-select
+          option(value="Send me email alert if") Send me email alert if
+          option(value="Condition") Condition
+          option(value="Condition") Condition
+      .rankings-individual__deals
+        a(href="#")
+          span Deals? 
+          span See here >>
+  nav.rankings-individual__navigation
+    .container__fluid
+      ul.rankings-individual__navigation-list
+        li.rankings-individual__navigation-item.rankings-individual__navigation-item_active
+          a(href="#").rankings-individual__navigation-link Overall Best Value for money rankings
+        li.rankings-individual__navigation-item
+          a(href="#").rankings-individual__navigation-link Highest Selling Rankings
+        li.rankings-individual__navigation-item
+          a(href="#").rankings-individual__navigation-link Fastest Selling Rankings
+        li.rankings-individual__navigation-item
+          a(href="#").rankings-individual__navigation-link Highest Rating Rankings
+        li.rankings-individual__navigation-item
+          a(href="#").rankings-individual__navigation-link Cheapest
+        li.rankings-individual__navigation-item
+          a(href="#").rankings-individual__navigation-link Costliest
+  section.rankings-individual__hero
+    .container__fluid
+      .rankings-individual__hero-img
+        img(src="assets/img/contents/fertilizers.jpg", alt="Image")
+      .rankings-individual__hero-text
+        h2 The Overall Best Laptops On Amazon Rankings
+        p Our intelligent algorithms ranked the best laptops you can buy on Amazon after analyzing a variety of data available from a vast number of sources.
+        p updated Today: 09-Nov, 2018(07:39 AM)
+  section.rankings-individual__cards
+    .container__fluid
+      .rankings-individual__card-wrap
+        .rankings-individual__card-rank
+          p #1
+          p Overall Best Rank In Laptops
+        .rankings-individual__card-container
+          .rankings-individual__card-img
+            a(href="#").rankings-individual__card-img-link
+              .rankings-individual__card-pic
+                img(src="assets/img/contents/image1.jpg", alt="Card product Image")
+            .rankings-individual__card-text Ranking in Trimmers

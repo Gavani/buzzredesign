@@ -1,0 +1,614 @@
+extends ../main-layout
+block variables
+  -
+    var 
+      title = "Buzzguide - Home Page",
+      how = [
+        {
+          head : "Rankings",
+          img  : "assets/img/decor/monkey(7).png",
+          info : "Exlpore our best product rankings across categories."
+        },
+        {
+          head : "Deals",
+          img  : "assets/img/decor/monkey2.png",
+          info : "100% Genuine Amazon price drops along with price history"
+        },
+        {
+          head : "Guides",
+          img  : "assets/img/decor/monkey(6).png",
+          info : "Interesting lists, product guides, articles & more"
+        },
+        {
+          head : "Price Alerts",
+          img  : "assets/img/decor/monkey3.png",
+          info : "Set price alerts Or Check price history of any Amazon Item."
+        }
+      ],
+            product =[
+        {
+          img : "assets/img/contents/image2.jpg",
+          text : "Vega Hight quality Cup"
+        },
+        {
+          img : "assets/img/contents/image2.jpg",
+          text : "Wow Apple Cider Vinegar Shampoo"
+        },
+        {
+          img : "assets/img/contents/image2.jpg",
+          text : "Vega Hight quality Cup"
+        },
+        {
+          img : "assets/img/contents/image2.jpg",
+          text : "Vega Hight quality Cup"
+        },
+        {
+          img : "assets/img/contents/image2.jpg",
+          text : "Wow Apple Cider Vinegar Shampoo"
+        },
+        {
+          img : "assets/img/contents/image2.jpg",
+          text : "Vega Hight quality Cup"
+        }
+      ];
+
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.hero(style="background: url('assets/img/backgrounds/desk-3139127.jpg')")
+    .container__fluid
+      .search__select-wrap
+        .search__select-head Buy Great Products At Great Price. Every Time.
+        .search__select-info Make the most informed purchase choice with the help of our intelligent product rankings, 100% genuine deals, guides, price alerts & much more.
+        .search__select
+          label.search__select-label
+            p Select Category
+            select.search__select-category
+              option(value="All") All
+              option(value="Category") Category
+              option(value="Category") Category
+              option(value="Category") Category
+              option(value="Category") Category
+              option(value="Category") Category
+          label.search__select-label
+            p See
+            select.search__select-see
+              option(value="See 100% Genuine Deals") See 100% Genuine Deals
+              option(value="See") See
+        .search__select-button
+          a.btn(href="#") See Now >
+  section.how__section
+    .container__fluid
+      .text-head How buzzguide helps you
+      .text-info We former colleagues at Freecharge started Buzzguide to help you find the best products at the right price.
+      ul.how__list
+        each item in how
+          li.how__item
+            .how__item-text= item.head
+            .how__item-img
+              img(src=`${item.img}`).how__item-img-pic
+            .how__item-info= item.info
+  section.buzz-ranking__section
+    .container__fluid
+      .buzz-ranking__text 
+        .buzz-ranking__text-img
+          img(src="assets/img/decor/monkey(7).png", alt="Image")
+        .buzz-ranking__text-wrap 
+          .buzz-ranking__text-wrap-head BUZZGUIDE RANKINGS
+          .buzz-ranking__text-wrap-info Our best product rankings helps you  find the best value for money items across the categories. A product with a good rank is least likely to disappoint you.
+      .buzz-ranking__tabs-wrap.tabs
+        ul.tabs__list.buzz-ranking__tabs-list
+          li.buzz-ranking__tabs-item.tabs__item.tabs__item_active
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span New Reviews
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Most Popular
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Home Services
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Insurance
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Financial Services
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Home Products
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Health & Fitness
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Beauty
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Pet
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+          li.buzz-ranking__tabs-item.tabs__item
+            a(href="#").tabs__link.buzz-ranking__tabs-link 
+              span Other
+              span
+                i.fas.fa-angle-down
+            .tabs__link-text
+        ul.buzz-ranking__tabs-content-list.tabs__content
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item_active
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 1
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 2
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 3
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 4
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 5
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 6
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 7
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 58
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 9
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+          li.buzz-ranking__tabs-content-item.tabs__content-item.tabs__content-item
+            ul.buzz-ranking__tabs-content-wrap-list
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image1.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Headphones 10
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image3.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Rotating Cleaning Mops
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image4.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Backpacks
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image6.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Men's Watches
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best Irons
+              li.buzz-ranking__tabs-content-wrap-item
+                a(href="#").buzz-ranking__tabs-content-wrap-link
+                  .buzz-ranking__tabs-content-wrap-img
+                    img(src="assets/img/contents/image7.jpg" alt="Image")
+                  .buzz-ranking__tabs-content-wrap-text The best MicroSD Cards
+      .buzz-ranking-text-help
+        .buzz-ranking__text-help-img
+          img(src="assets/img/icons/elemental-tip.png" alt="Idea")
+        .buzz-ranking__text-help-info Use the search bat at the top of this page to see product rankings across more categories.
+  section.buzz-deals-img__section
+    .container
+      .buzz-deals-img__wrap
+        .head-inline__img
+          img(src="assets/img/decor/monkey2.png" alt="Monkey")
+        .head-inline__text 
+          h2 Buzzguide deals
+          h2 100% genuine price drops on Amazon. Update everyday along with price history.
+  section.buzz-deals__section
+    .container__fluid
+      .buzz-deals__wrap
+        .buzz-deals__img
+          img(src="assets/img/contents/gmail.png", alt="")
+        .buzz-deals__text
+          .buzz-deals__text-head 100% Genuine Amazon Deals Updated Everyday Along With Price History
+          .buzz-deals__text-button 
+            a(href="#").btn See Today's Deals Now >>
+          .buzz-deals__text-footer
+            .buzz-deals__text-footer-img
+              img(src="assets/img/decor/giraffe.png", alt="Giraffe")
+            .buzz-deals__text-footer-info Hey! Now you can filter deals by category
+  section.buzz-reviews-img__section
+    .container
+      .buzz-reviews-img__wrap
+        .head-inline__img
+          img(src="assets/img/decor/monkey(6).png" alt="Monkey")
+        .head-inline__text 
+          h2 Guides
+          h2 The Best stuff & interesting lists.
+  section.buzz-reviews__section
+    .container__fluid
+      ul.buzz-reviews__list
+        li.buzz-reviews__item.card-btn
+          a(href="#").buzz-reviews__link
+            .buz-reviews__link-img
+              img(src="assets/img/contents/image6.jpg" alt="Image")
+            .buz-reviews__link-text-wrap
+              .buz-reviews__link-text The Top 30 Most Popular Products of this week on  Amazon India Ranking
+              .buz-reviews__link-text-update Update: 18th September
+              .buz-reviews__link-text-info-wrap
+                .buz-reviews__link-text-info-img
+                  img(src="assets/img/icons/pin.png" alt="Image")
+                .buz-reviews__link-text-info Updated every sunday
+        li.buzz-reviews__item.card-btn
+          a(href="#").buzz-reviews__link
+            .buz-reviews__link-img
+              img(src="assets/img/contents/product.jpg" alt="Image")
+            .buz-reviews__link-text-wrap
+              .buz-reviews__link-text The Top 100 Highest Rated Items On Entire Amazon India (With a Minimum 100 Reviews)
+              .buz-reviews__link-text-update Update: 18th September
+              .buz-reviews__link-text-info-wrap
+                .buz-reviews__link-text-info-img
+                  img(src="assets/img/icons/pin.png" alt="Image")
+                .buz-reviews__link-text-info Updated every sunday
+        li.buzz-reviews__item.card-btn
+          a(href="#").buzz-reviews__link
+            .buz-reviews__link-img
+              img(src="assets/img/contents/image1.jpg" alt="Image")
+            .buz-reviews__link-text-wrap
+              .buz-reviews__link-text Haier HRD-1254 Vs LG GL-201 Which is the best 4 star direct cool refrigerator
+              .buz-reviews__link-text-update Update: 18th September
+              .buz-reviews__link-text-info-wrap
+                .buz-reviews__link-text-info-img
+                  img(src="assets/img/icons/pin.png" alt="Image")
+                .buz-reviews__link-text-info Updated every sunday
+        li.buzz-reviews__item.card-btn
+          a(href="#").buzz-reviews__link
+            .buz-reviews__link-img
+              img(src="assets/img/contents/fertilizers.jpg" alt="Image")
+            .buz-reviews__link-text-wrap
+              .buz-reviews__link-text The Best Fertilizer to buy on Amazon India for your Home Garden
+              .buz-reviews__link-text-update Update: 18th September
+              .buz-reviews__link-text-info-wrap
+                .buz-reviews__link-text-info-img
+                  img(src="assets/img/icons/pin.png" alt="Image")
+                .buz-reviews__link-text-info Updated every sunday
+      .buzz-reviews__footer-link
+        a(href="#") See all our product guides & interesting lists >
+  section.buzz-alerts-img__section
+    .container
+      .buzz-alerts-img__wrap
+        .head-inline__img
+          img(src="assets/img/decor/monkey3.png" alt="Monkey")
+        .head-inline__text 
+          h2 Price Alerts & 
+            br
+            | Price History Check
+          h2 Check price history of any amazon item or set price alert at your desired price
+  section.buzz-alerts__section
+    .container__fluid
+      .buzz-alerts__form-wrap
+        form.buzz-alerts__form 
+          .buzz-alerts__form-text Enter Any Amazon URL or Product Name
+          .buzz-alerts__form-fields
+            input(type="text" placeholder="philips qt4011 trimmer").buzz-alerts__form-input
+          .buzz-alerts__form-fields.buzz-alerts__form-fields_flex
+            label.buzz-alerts__form-fields-label.buzz-alerts__form-fields-label_rs
+              input(type="text" placeholder="Enter your desired price").buzz-alerts__form-input
+            label.buzz-alerts__form-fields-label.buzz-alerts__form-fields-label_mail
+              input(type="text" placeholder="Enter your email address").buzz-alerts__form-input
+          .buzz-alerts__form-btn-wrap
+            button(type="submit").buzz-alerts__form-btn.btn
+              .buzz-alerts__form-btn-img
+                img(src="assets/img/decor/monkey3.png" alt="Monkey")
+              .buzz-alerts__form-btn-text Start Traking Now
+          .buzz-alerts__form-text-bottom
+            span It's even more simple & easy to create alerts on our 
+            a(href="#") Price Alerts Page >
+        .buzz-alerts__form-text-left
+          p Product name will be matched accurately by our alghoritm. No need enter exact name.
+          p But for even better accuracy enter Amzaon enter URL instead of product name.
+      .buzz-alerts__mail-img
+        img(src="assets/img/contents/gmail.png" alt="Mail Image").buzz-alerts__mail-pic
+      .buzz-alerts__products
+        .buzz-alerts__products-head-text These products have maximum alerts set by our users
+        ul.buzz-alerts__products-list
+          each item in product
+            li.buzz-alerts__products-item
+              .buzz-alerts__products-list-img
+                img(src=`${item.img}`, alt="Product Image")
+              .buzz-alerts__products-list-text= item.text
+              .buzz-alerts__products-list-link
+                a(href="#").btn Set your price >
+        .buzz-laerts__products-bottom-btn
+          a(href="#").btn See Price Alerts Page Now >
+  include ../modules/bottom-1.pug
+  +bottom1
+  include ../modules/footer.pug
+  +footer

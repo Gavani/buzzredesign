@@ -68,3 +68,29 @@ h1, h2, h3, h4, h5{
 button, input, a{
     outline: none;
 }
+
+.btn{
+    box-shadow: 0 4px 6px rgba(50,50,93,.21), 0 1px 3px rgba(0,0,0,.18);
+    transition: .15s linear;
+
+    &:hover{
+        box-shadow: 0 7px 14px rgba(50,50,93,.21), 0 3px 6px rgba(0,0,0,.18);
+        transform: translateY(-2px);
+    }
+}
+
+.card-btn{
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+    transition-duration: .2s;
+    transition-property: color,background-color,box-shadow,transform,-webkit-box-shadow,-webkit-transform;
+
+    &:hover{
+        box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
+        transform: translate(2px, -2px);
+    }
+}
+select, input{
+    height: auto !important;
+    margin-bottom: 0 !important;
+    border-radius: 0;
+}

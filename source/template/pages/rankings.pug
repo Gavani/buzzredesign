@@ -1,0 +1,128 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Buzzguide - Rankings Start Page";
+  
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.rankings__breadcrumbs
+    .container__fluid
+      ul.rankings__breadcrumbs-list
+        li.rankings__breadcrumbs-item
+          a(href="#").rankings__breadcrumbs-link Product Rankings 
+          span.rankings__breadcrumbs-devide >>
+        li.rankings__breadcrumbs-item.rankings__breadcrumbs-item_active
+          span.rankkings__breadcrumbs-span Start page
+  section.rankings__hero
+    .container__fluid
+      .rankings__hero-head-text
+        h2 Best Product Rankings Across The Categories
+      .rankings__hero-search
+        label.rankings__hero-search-label
+          input(type="search", name="search", placeholder='Start typing category name....Try "Bedsheets" ')
+          span.rankings__hero-search-icon
+            i(class="fas fa-search")
+      .rankings__hero-text OR
+      .rankings__hero-category-text Select a category below
+      .rankings__hero-category
+        include ../modules/menu.pug
+        +menu
+  section.rankings__top
+    .container__fluid
+      ul.rankings__top-list
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/image6.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Fast Track Silo 13544 Wrist Watch
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Men's Watches
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/product.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Top Trimmer
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Men's Trimmers
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/image4.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Skybags Backpack
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Backpacks
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/image6.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Fast Track Silo 13544 Wrist Watch
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Men's Watches
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/product.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Top Trimmer
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Men's Trimmers
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/image4.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Skybags Backpack
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Backpacks
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/image6.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Fast Track Silo 13544 Wrist Watch
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Men's Watches
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/product.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Top Trimmer
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Men's Trimmers
+        li.rankings__top-item.btn
+          a(href="#").rankings__top-links
+            .rankings__top-cards
+              .rankings__top-cards-img
+                img(src="assets/img/contents/image4.jpg", alt="Card Image")
+              .rankings__top-cards-product-info
+                .rankings__top-cards-product-name Skybags Backpack
+                .rankings__top-cards-product-rank 
+                  span #1 Rank In 
+                  span Backpacks
+      .rankigs__top-bottom There's many more categories. Just type in the search bar.
+  include ../modules/bottom-1.pug
+  +bottom1
+  include ../modules/footer.pug
+  +footer

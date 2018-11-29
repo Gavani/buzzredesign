@@ -1,0 +1,17 @@
+mixin header (additionClass)
+  header(class=`header ${additionClass}__header`)
+    .container__fluid
+      nav.header__nav
+        .nav__logo
+          a(href="#").nav__logo-link
+            img(src="assets/img/logo/logo.png", alt="Logo")
+        ul.nav__list
+          each item in ['Product Rankings', 'Deals', 'Guides', 'Price Alerts', 'Price History Check']
+            li.nav__item
+              a.nav__link(href="#")= item
+        .nav__serch
+          label.nav__seach-label
+            input(type="search", name="search", placeholder='Type "Bedsheets" ')
+            span.nav__search-icon 
+              i(class="fas fa-search")
+        
