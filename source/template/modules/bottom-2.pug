@@ -1,0 +1,83 @@
+-
+  var products =[
+    {
+      img : "assets/img/contents/backpacks.jpg",
+      name : "Backpacks"
+    },
+    {
+      img : "assets/img/contents/rucksacks.png",
+      name : "Rucksacks"
+    },
+    {
+      img : "assets/img/contents/rucksacks.png",
+      name : "Rucksacks"
+    },
+    {
+      img : "assets/img/contents/rucksacks.png",
+      name : "Rucksacks"
+    }
+  ];
+mixin bottom2 (additionClass)
+  section.buzz-bottom-second__nav
+    .container
+      .buzz-bottom-second__nav-links
+        p.buzz-bottom-second__nav-current Current Page (Page 1)
+        a(href="#").buzz-bottom-second__nav-next.btn See Nezt Page >>
+  section.buzz-bottom-second__rankings
+    .container
+      .buzz-bottom-second__rankings-head Also see rankings in
+  section.buzz-bottom-second__products
+    .container__fluid
+      ul.buzz-bottom-second__products-list
+        each item in products
+          li.buzz-bottom-second__products-item
+            a(href).buzz-bottom-second__products-link
+              .buzz-bottom-second__products-link-img
+                img(src=`${item.img}`, alt="Product Image")
+              .buzz-bottom-second__products-link-name= item.name
+  section.buzz-bottom-second__links-wrap
+    .container__fluid
+      .buzz-bottom-second__links-img
+        img(src="assets/img/backgrounds/desk-3139127.jpg", alt="Image")
+      .buzz-bottom-second__links
+        .buzz-bottom-second__links-head
+          p 80% of our users like  you who visited this page also  loved these pages:
+        .buzz-bottom-second__links-group
+          .buzz-bottom-second__links-group-breadcrumbs
+            span Buzzguide 
+            span > 
+            span Deals Page
+          .buzz-bottom-second__links-group-info
+            p 100% genuine deals  along with Full Price History. See Now.
+          .buzz-bottom-second__links-gorup-anchor
+            a(href="#").btn See Buzzguide Deals >>
+        .buzz-bottom-second__links-group
+          .buzz-bottom-second__links-group-breadcrumbs
+            span Buzzguide 
+            span > 
+            span Guides Page
+          .buzz-bottom-second__links-group-info
+            p Amazon top charts, Reviews, articles & other interesting stuff.
+          .buzz-bottom-second__links-gorup-anchor
+            a(href="#").btn See Buzzguide Guides >>
+  section.buzz-bottom-second__member
+    .container__fluid
+      .buzz-bottom-second__member-img
+        img(src="assets/img/decor/giraffe.png", alt="Image")
+      .buzz-bottom-second__register
+        .buzz-bottom-second__register-test
+          p Hey!!
+          p Become a Buzzguide early member for free & we treat you with a special privilege for life.
+        form.buzz-bottom-second__register-form
+          label.buzz-bottom-second__register-form-label
+            input(type="email", name="email", placeholder="Enter Your Email Address")
+          label.buzz-bottom-second__register-form-label
+            input(type="text", name="name", placeholder="Enter Your Name")
+          button(type="submit").buzz-bottom-second__register-form-btn.btn
+            p Be a Member Now For Free
+            p Join now to be one among our first 3000 members
+        .buzz-bottom-second__register-last
+          p Someone last joined 2 hours back
+      .buzz-bottom-second__member-info
+        p You'll be the first to receive any invitation/new anouncement/ rewards from us.
+        p Your feedback/suggestions are highly valued & quickly implemented. And lots more...

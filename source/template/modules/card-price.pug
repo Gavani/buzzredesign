@@ -1,0 +1,93 @@
+-
+  var price = [
+    {
+      date : "26-NOV",
+      rs   : "Rs 7379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 7379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 7379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 7379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "26-NOV",
+      rs   : "Rs 79"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 73739"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 7"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 737379"
+    },
+    {
+      date : "27-NOV",
+      rs   : "Rs 737323"
+    }
+  ];
+
+mixin priceHistory (additionClass)
+  .product__card-price-head
+    .product__card-price-head-text Amazon Price History
+    .product__card-price-head-update Last Update: 24th Nov, 04:57 PM
+  ul.product__card-price-list
+    each item in price
+      li.product__card-price-item
+        .product__card-price-date= item.date
+        .product__card-price-rs= item.rs

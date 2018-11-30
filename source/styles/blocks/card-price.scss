@@ -1,0 +1,57 @@
+.product__card-price-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include latobold;
+  margin-bottom: 15px;
+}
+.product__card-price-head-text{
+  color: #d01e01;
+}
+.product__card-price-head-update{
+  color: #aa2501;
+  font-size: 14px;
+}
+.product__card-price-list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: space-between;
+  height: 185px;
+  font-size: .875rem;
+  margin-left: -19px;
+  .product__card-price-item{
+    &:last-child{
+      .product__card-price-rs{
+        position: relative;
+        &:after{
+          content: "Today";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          border-top-width: 2px;
+          border-top-style: solid;
+          border-top-color: #007f00;
+          width: 100%;
+          text-align: center;
+          margin-top: 8px;
+          color: #121212;
+        }
+      }
+    }
+  }
+}
+.product__card-price-item{
+  display: flex;
+  margin-bottom: 6px;
+  width: 140px;
+  margin-left: 19px;
+  @include latobold;
+}
+.product__card-price-date{
+  margin-right: 10px;
+  color: #040404;
+}
+.product__card-price-rs{
+  color: #ff3509;
+}

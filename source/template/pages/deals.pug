@@ -1,0 +1,237 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Buzzguide - Deals Start Page";
+  
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.rankings-individual__breadcrumbs.deals-individual__breadcrumbs.deals-individual__breadcrumbs_stripe
+    .container__fluid
+      ul.rankings__breadcrumbs-list
+        li.rankings__breadcrumbs-item
+          a(href="#").rankings__breadcrumbs-link Deals
+          span.rankings__breadcrumbs-devide >>
+        li.rankings__breadcrumbs-item.rankings__breadcrumbs-item_active
+          span.rankkings__breadcrumbs-span Start Page (Default page - All Amazon Deals)
+      .rankings__filter
+        select.rankings__filter-select
+          option(value="Filter By Brand") Filter By Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+          option(value="Brand") Brand
+      label.nav__seach-label.ranking-individual__search
+        input(type="search", name="search", placeholder='Search in laptops.... ')
+        span.nav__search-icon 
+          i(class="fas fa-search")
+      .rankings__alert
+        select.rankings__alert-select
+          option(value="Send me email alert if") Send me email alert if
+          option(value="Condition") Condition
+          option(value="Condition") Condition
+      .rankings-individual__deals
+        a(href="#")
+          span Rankings? 
+          span Goo here >>
+    .container__fluid
+      ul.deals-strip__list
+        each item in ["Fight Deals", "Movies", "Mobile Recharges", "DTH Recharges", "Hotels", "Bus Booking", "Online Food Orders"]
+          li.deals-strip__item
+            a(href="#").delas-strip__link= item
+  main.deals-main
+    .container__fluid
+      aside.deals__aside
+        .deals__aside-head
+          p Filter Applied
+          p 
+            span Laptops
+            a(href="#")
+              <i class="far fa-times-circle"></i>
+        .deals__aside-filter
+          .deals__aside-filter-type
+            .deals__aside-filter-type-head Filter Deals By Type
+            ul.deals__aside-filter-type-list
+              each item in ["All Amazon Deals", "Deals On Amazon's Most famous Items", "Deals On Items With 1000+ Reviews", "Deals On Items With Rating Above 4.4", "Deals On Items (Cost above Rs.5000)", "Deals On Items (Cost above Rs.10000)", "Deals On Items (Cost below Rs.500)", "Deals On Items (Cost below Rs.1000)"]
+                li.deals__aside-filter-type-item
+                  a(href="#").deals__aside-filter-type-link= item
+          .deals__aside-filter-category
+            .deals__aside-filter-category-head Filter Deals By Category
+            .deals__aside-filter-category-search
+              label
+                input(type="search", name="search" placeholder="Type a category name")
+                span
+                  i(class="fas fa-search")
+            ul.deals__aside-filter-category-list
+              each item in ["Air Conditioners", "Air Fryers", "Air Purfiers", "Backpacks", "Badminton Racquets", "Basket Balls", "Ceiling Fans", "CFL Bulbs", "Cricket Bats", "Dumbbels"]
+                li.deals__aside-filter-category-item
+                  a(href="#").deals__aside-filter-category-link= item
+      section.deals__cards
+          .deals__cards-head
+            .deals__cards-head-img
+              img(src="assets/img/contents/fertilizers.jpg", alt="Image")
+            .deals__cards-head-text
+              h2 Laptops - Today's 100% Real Price Drops On Amazon
+              p We compare today's amazon prices of various Laptops to their 30 days back prices to find 100% real price drops. Minimum 30 Amazon reviews compulsory.
+              p UPDATED TODAY: 09-Nov, 2018 (7:33 AM)
+          .deals__cards-item
+            .ribbon__wrapp
+              .ribbon
+                | Featured Price Drop
+              i
+            .deals__cards-item-img
+              .deals__cards-item-img-drop
+                p 52%
+                p Price Drop
+              .deals__cards-item-pic
+                img(src="assets/img/contents/image1.jpg", alt="Product Image")
+            .deals__cards-item-left
+              .deals__cards-item-info
+                .deals__cards-item-info-name
+                  h3 Phillips Trimmer QT4011 cordless trimmer
+                .deals__cards-item-info-rating
+                  span.text-red 4.2 
+                  | rating, From 
+                  span.text-red 13334 
+                  | Amazon Reviews
+                .deals__cards-item-info-rs
+                  p Rs 344020 on Amazon
+              .deals__cards-item-rs
+                .deals__cards-item-rs-30
+                  del Rs 89 
+                  span 30 days back
+                .deals__cards-item-rs-today
+                  span Rs 49 
+                  span Today
+                .deals__cards-item-rs-drop
+                  span Rs.3399 (52%) Price Drop
+                .deals__cards-item-rs-lowest
+                  p Lowest price in 30 days: Rs.567669
+                .deals__cards-item-rs-highest
+                  p Highest price in 30 days: Rs.867669
+              .deals__cards-item-price
+                .deals__cards-item-price-history
+                  include ../modules/card-price
+                  +priceHistory
+                .deals__cards-item-price-links
+                  a(href="#").deals__cards-item-price-links-amazon See it on Amazon > 
+                  a(href="#").deals__cards-item-price-links-alert Or set price alert to this item at your desired price >
+          .deals__cards-item
+            .deals__cards-item-img
+              .deals__cards-item-img-drop
+                p 52%
+                p Price Drop
+              .deals__cards-item-pic
+                img(src="assets/img/contents/image1.jpg", alt="Product Image")
+            .deals__cards-item-left
+              .deals__cards-item-info
+                .deals__cards-item-info-name
+                  h3 Phillips Trimmer QT4011 cordless trimmer
+                .deals__cards-item-info-rating
+                  span.text-red 4.2 
+                  | rating, From 
+                  span.text-red 13334 
+                  | Amazon Reviews
+                .deals__cards-item-info-rs
+                  p Rs 344020 on Amazon
+              .deals__cards-item-rs
+                .deals__cards-item-rs-30
+                  del Rs 89 
+                  span 30 days back
+                .deals__cards-item-rs-today
+                  span Rs 49 
+                  span Today
+                .deals__cards-item-rs-drop
+                  span Rs.3399 (52%) Price Drop
+                .deals__cards-item-rs-lowest
+                  p Lowest price in 30 days: Rs.567669
+                .deals__cards-item-rs-highest
+                  p Highest price in 30 days: Rs.867669
+              .deals__cards-item-price
+                .deals__cards-item-price-history
+                  include ../modules/card-price
+                  +priceHistory
+                .deals__cards-item-price-links
+                  a(href="#").deals__cards-item-price-links-amazon See it on Amazon > 
+                  a(href="#").deals__cards-item-price-links-alert Or set price alert to this item at your desired price >
+          .deals__cards-item
+            .deals__cards-item-img
+              .deals__cards-item-img-drop
+                p 52%
+                p Price Drop
+              .deals__cards-item-pic
+                img(src="assets/img/contents/image1.jpg", alt="Product Image")
+            .deals__cards-item-left
+              .deals__cards-item-info
+                .deals__cards-item-info-name
+                  h3 Phillips Trimmer QT4011 cordless trimmer
+                .deals__cards-item-info-rating
+                  span.text-red 4.2 
+                  | rating, From 
+                  span.text-red 13334 
+                  | Amazon Reviews
+                .deals__cards-item-info-rs
+                  p Rs 344020 on Amazon
+              .deals__cards-item-rs
+                .deals__cards-item-rs-30
+                  del Rs 89 
+                  span 30 days back
+                .deals__cards-item-rs-today
+                  span Rs 49 
+                  span Today
+                .deals__cards-item-rs-drop
+                  span Rs.3399 (52%) Price Drop
+                .deals__cards-item-rs-lowest
+                  p Lowest price in 30 days: Rs.567669
+                .deals__cards-item-rs-highest
+                  p Highest price in 30 days: Rs.867669
+              .deals__cards-item-price
+                .deals__cards-item-price-history
+                  include ../modules/card-price
+                  +priceHistory
+                .deals__cards-item-price-links
+                  a(href="#").deals__cards-item-price-links-amazon See it on Amazon > 
+                  a(href="#").deals__cards-item-price-links-alert Or set price alert to this item at your desired price >
+          .deals__cards-item
+            .deals__cards-item-img
+              .deals__cards-item-img-drop
+                p 52%
+                p Price Drop
+              .deals__cards-item-pic
+                img(src="assets/img/contents/image1.jpg", alt="Product Image")
+            .deals__cards-item-left
+              .deals__cards-item-info
+                .deals__cards-item-info-name
+                  h3 Phillips Trimmer QT4011 cordless trimmer
+                .deals__cards-item-info-rating
+                  span.text-red 4.2 
+                  | rating, From 
+                  span.text-red 13334 
+                  | Amazon Reviews
+                .deals__cards-item-info-rs
+                  p Rs 344020 on Amazon
+              .deals__cards-item-rs
+                .deals__cards-item-rs-30
+                  del Rs 89 
+                  span 30 days back
+                .deals__cards-item-rs-today
+                  span Rs 49 
+                  span Today
+                .deals__cards-item-rs-drop
+                  span Rs.3399 (52%) Price Drop
+                .deals__cards-item-rs-lowest
+                  p Lowest price in 30 days: Rs.567669
+                .deals__cards-item-rs-highest
+                  p Highest price in 30 days: Rs.867669
+              .deals__cards-item-price
+                .deals__cards-item-price-history
+                  include ../modules/card-price
+                  +priceHistory
+                .deals__cards-item-price-links
+                  a(href="#").deals__cards-item-price-links-amazon See it on Amazon > 
+                  a(href="#").deals__cards-item-price-links-alert Or set price alert to this item at your desired price >
+  include ../modules/bottom-2
+  +bottom2
+  include ../modules/footer
+  +footer

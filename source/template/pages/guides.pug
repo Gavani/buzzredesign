@@ -1,0 +1,145 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Buzzguide - Guides Start Page";
+  
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.rankings-individual__breadcrumbs.guides__breadcrumbs
+    .container__fluid
+      ul.rankings__breadcrumbs-list
+        li.rankings__breadcrumbs-item
+          a(href="#").rankings__breadcrumbs-link Guides
+          span.rankings__breadcrumbs-devide >>
+        li.rankings__breadcrumbs-item.rankings__breadcrumbs-item_active
+          span.rankkings__breadcrumbs-span Start Page
+  section.guides__head
+    .container__fluid
+      .guides__head-guids-wrap
+        .guides__head-guids-top
+          .guides__head-guids-top-img
+            img(src="assets/img/decor/monkey2.png", alt="Image")
+          .guides__head-guids-top-text Buzzguide Guides
+        .guides__head-guids-info
+          p Our guides &  comparisons makes your pruchase decision simplified & more infrmed
+        .guides__head-guids
+          ul.guides__head-guids-list
+            li.guides__head-guids-item
+              .guides__head-guids-img
+                img(src="assets/img/decor/seagull.png", alt="Seagull")
+              .guides__head-guids-text
+                p Product Reviews
+            li.guides__head-guids-item
+              .guides__head-guids-img
+                img(src="assets/img/decor/seagull.png", alt="Seagull")
+              .guides__head-guids-text
+                p Buying Guides
+            li.guides__head-guids-item
+              .guides__head-guids-img
+                img(src="assets/img/decor/seagull.png", alt="Seagull")
+              .guides__head-guids-text
+                p Product Reviews
+            li.guides__head-guids-item
+              .guides__head-guids-img
+                img(src="assets/img/decor/seagull.png", alt="Seagull")
+              .guides__head-guids-text
+                p Product Reviews
+      .guides__head-best-wrap
+        .guides__head-best-img
+          img(src="", alt="Image")
+        .guides__head-best-info
+          .guides__head-best-info-name
+            p The Best Bedsheets to buy on Amazon - Our Singe Best Pick from 10000+ bedsheets on Amazon
+          .guides__head-best-info-text
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim consequatur deserunt eveniet iusto praesentium? Libero nulla vero odio cupiditate nisi assumenda laboriosam obcaecati, perferendis doloremque hic officia, fuga tempore itaque.
+          .guides__head-best-info-published
+            p Published: 5th November, 2018
+  section.guides__charts
+    .container__fluid
+      .guides__charts-head
+        p Top Charts
+      ul.guides__charts-list
+        li.guides__charts-item
+          a(href="#").guides__charts-link.btn
+            .guides__charts-link-img
+              img(src="", alt="Charts Image")
+            .guides__charts-link-text
+              p The top highest selling  items on entire Amazon
+        li.guides__charts-item
+          a(href="#").guides__charts-link.btn
+            .guides__charts-link-img
+              img(src="", alt="Charts Image")
+            .guides__charts-link-text
+              p The top highest selling  items on entire Amazon
+        li.guides__charts-item
+          a(href="#").guides__charts-link.btn
+            .guides__charts-link-img
+              img(src="", alt="Charts Image")
+            .guides__charts-link-text
+              p The top highest selling  items on entire Amazon
+        li.guides__charts-item
+          a(href="#").guides__charts-link.btn
+            .guides__charts-link-img
+              img(src="", alt="Charts Image")
+            .guides__charts-link-text
+              p The top highest selling  items on entire Amazon
+        li.guides__charts-item
+          a(href="#").guides__charts-link.btn
+            .guides__charts-link-img
+              img(src="", alt="Charts Image")
+            .guides__charts-link-text
+              p The top highest selling  items on entire Amazon
+  section.guides__reviews
+    .container__fluid
+      ul.guides__reviews-list
+        li.guides__reviews-item
+          a(href="#").guides__reviews-link
+            .guides__reviews-img
+              img(src="", alt="Product Imate")
+            .guides__reviews-text
+              p The top highest selling  items on entire Amazon
+        li.guides__reviews-item
+          a(href="#").guides__reviews-link
+            .guides__reviews-img
+              img(src="", alt="Product Imate")
+            .guides__reviews-text
+              p The top highest selling  items on entire Amazon
+        li.guides__reviews-item
+          a(href="#").guides__reviews-link
+            .guides__reviews-img
+              img(src="", alt="Product Imate")
+            .guides__reviews-text
+              p The top highest selling  items on entire Amazon
+        li.guides__reviews-item
+          a(href="#").guides__reviews-link
+            .guides__reviews-img
+              img(src="", alt="Product Imate")
+            .guides__reviews-text
+              p The top highest selling  items on entire Amazon
+        li.guides__reviews-item
+          a(href="#").guides__reviews-link
+            .guides__reviews-img
+              img(src="", alt="Product Imate")
+            .guides__reviews-text
+              p The top highest selling  items on entire Amazon
+        li.guides__reviews-item
+          a(href="#").guides__reviews-link
+            .guides__reviews-img
+              img(src="", alt="Product Imate")
+            .guides__reviews-text
+              p The top highest selling  items on entire Amazon
+  seciton.guides__information
+    .container
+      .guides__information-img
+        img(src="assets/img/decor/giraffe.png", alt="Image")
+      .guides__information-text-wrap
+        .guides__information-text-head
+          p That's ir for now.
+        .guides__information-text
+          p This is relatively a new section & so you are not seeing much content here. Very soon, you are going to find lots more here. Make sure to subscribe to our emai updates (Subsribe option is at bottom of this page).
+  include ../modules/bottom-1
+  +bottom1
+  include ../modules/footer
+  +footer
+      
