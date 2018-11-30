@@ -1,0 +1,124 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Buzzguide - Price Alerts Create";
+  
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.rankings-individual__breadcrumbs.alerts__breadcrumbs
+    .container__fluid
+      ul.rankings__breadcrumbs-list
+        li.rankings__breadcrumbs-item
+          a(href="#").rankings__breadcrumbs-link Price Alerts
+          span.rankings__breadcrumbs-devide >>
+        li.rankings__breadcrumbs-item.rankings__breadcrumbs-item_active
+          span.rankkings__breadcrumbs-span Create
+  section.alerts__hero
+    .alerts__hero-img
+      img(src="assets/img/contents/gmail.png", alt="Email")
+    .alerts__hero-wrap
+      .alerts__hero-head-text
+        p Set Price Drop Alerts To Your Desired Items At Your Desired Price
+      form.alerts__hero-form
+        .buzz-alerts__form-fields
+          input(type="text" placeholder="Enter Amazon URL of your desired product").buzz-alerts__form-input
+        .buzz-alerts__form-fields.buzz-alerts__form-fields_flex
+          label.buzz-alerts__form-fields-label.buzz-alerts__form-fields-label_rs
+            input(type="text" placeholder="Enter your desired price").buzz-alerts__form-input
+          label.buzz-alerts__form-fields-label.buzz-alerts__form-fields-label_mail
+            input(type="text" placeholder="Enter your email address").buzz-alerts__form-input
+        button.alerts__hero-button.btn Okay, Create my alert now.
+      .alerts__hero-footer-text
+        p *Only amazon.in URL's are supported.
+        p *You will receive alert when the price drops to your desired price or lower
+  section.alerts__unsubscribe
+    .container
+      .alerts__unsubscribe-head-text
+        p You can unsubscribe any alert any time.
+      .alerts__unsubscribe-link
+        a(href="#").btn See our unsubsribe page
+  section.alerts__famous
+    .container__fluid
+      .alerts__famous-text
+        .alerts__famous-text-head
+          p Most famous price alerts set by our users
+        .alerts__famous-text-head-update
+          p Last update: 08th October, 09:25AM
+      ul.alerts__famous-list
+        li.alerts__famous-item
+          .alerts__famous-item-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .alerts__famous-item-text
+            .alerts__famous-item-name
+              p Fastrack stylish analogue wrist watch
+            .alerts__famous-item-price
+              p Today's Amazon Price Rs.1222
+            .alerts__famous-item-alert-price
+              p Most people set price alert at Rs.999
+            .alerts__famous-item-link
+              a(href="#").btn Set Yourself
+        li.alerts__famous-item
+          .alerts__famous-item-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .alerts__famous-item-text
+            .alerts__famous-item-name
+              p Fastrack stylish analogue wrist watch
+            .alerts__famous-item-price
+              p Today's Amazon Price Rs.1222
+            .alerts__famous-item-alert-price
+              p Most people set price alert at Rs.999
+            .alerts__famous-item-link
+              a(href="#").btn Set Yourself
+        li.alerts__famous-item
+          .alerts__famous-item-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .alerts__famous-item-text
+            .alerts__famous-item-name
+              p Fastrack stylish analogue wrist watch
+            .alerts__famous-item-price
+              p Today's Amazon Price Rs.1222
+            .alerts__famous-item-alert-price
+              p Most people set price alert at Rs.999
+            .alerts__famous-item-link
+              a(href="#").btn Set Yourself
+        li.alerts__famous-item
+          .alerts__famous-item-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .alerts__famous-item-text
+            .alerts__famous-item-name
+              p Fastrack stylish analogue wrist watch
+            .alerts__famous-item-price
+              p Today's Amazon Price Rs.1222
+            .alerts__famous-item-alert-price
+              p Most people set price alert at Rs.999
+            .alerts__famous-item-link
+              a(href="#").btn Set Yourself
+        li.alerts__famous-item
+          .alerts__famous-item-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .alerts__famous-item-text
+            .alerts__famous-item-name
+              p Fastrack stylish analogue wrist watch
+            .alerts__famous-item-price
+              p Today's Amazon Price Rs.1222
+            .alerts__famous-item-alert-price
+              p Most people set price alert at Rs.999
+            .alerts__famous-item-link
+              a(href="#").btn Set Yourself
+        li.alerts__famous-item
+          .alerts__famous-item-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .alerts__famous-item-text
+            .alerts__famous-item-name
+              p Fastrack stylish analogue wrist watch
+            .alerts__famous-item-price
+              p Today's Amazon Price Rs.1222
+            .alerts__famous-item-alert-price
+              p Most people set price alert at Rs.999
+            .alerts__famous-item-link
+              a(href="#").btn Set Yourself
+  include ../modules/bottom-1
+  +bottom1
+  include ../modules/footer
+  +footer
