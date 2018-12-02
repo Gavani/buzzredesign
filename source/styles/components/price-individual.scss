@@ -1,0 +1,140 @@
+.price-individual__breadcrumbs{
+  background: #3800aa !important;
+
+  .rankings-individual__deals{
+    a{
+      color: #fe81af;
+      &:hover{
+        span{
+          &:last-child{
+            border-bottom-color: #fe81af;
+          }
+        }
+      }
+    }
+  }
+}
+.price-individual__head{
+  padding: 50px 0;
+  .container{
+    display: flex;
+    align-items: center;
+  }
+}
+.price-individual__head-img{
+  width: 180px;
+  margin-right: 30px;
+  img{
+    max-width: 100%;
+  }
+}
+.price-individual__head-text{
+  width: 500px;
+
+  h3{
+    font-size: 24px;
+    @include latobold;
+    color: #013bbd;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  p{
+    &:nth-child(2){
+      color: #5b5b5b;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    &:last-child{
+      display: inline-block;
+      padding: 5px 20px;
+      color: #fefefe;
+      font-size: 15px; 
+      @include latobold;
+      background: #0046d4;
+    }
+  }
+}
+
+.price-individual__product{
+  padding: 0 0 50px 0;
+  .container__fluid{
+    .price-individual__product-list{
+      &:last-child{
+        &::after{
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          display: block;
+          height: 2px;
+          width: 100%;
+          background: #b9b9b9;
+        }
+      }
+    }
+  }
+}
+.price-individual__product-list{
+  padding: 50px 0;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  &:before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #b9b9b9;
+  }
+}
+.price-individual__product-item{
+  width: 26%;
+}
+.price-individual__product-item-img{
+  text-align: center;
+  margin-bottom: 15px;
+  img{    
+    max-width: 180px;
+  }
+}
+.price-individual__product-item-info{
+  display: flex;
+  flex-direction: column;
+}
+.price-individual__product-item-name{
+  margin-bottom: 10px;
+  p{
+    @include latobold;
+    color: #012498;
+    font-size: 15.5px;
+  }
+}
+.price-individual__product-item-rating{
+  @include latobold;
+  font-size: 14px;
+  color: #013bbd;
+  margin-bottom: 10px;
+}
+.price-individual__product-item-rs{
+  margin-bottom: 10px;
+  p{
+    @include latobold;
+    font-size: 15px;
+    color: #040404;
+  }
+}
+.price-individual__product-item-link{
+  margin-top: auto;
+  a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffaa00;
+    color: #2f2f2e;
+    @include latobold;
+    font-size: 15px;
+    text-decoration: none;
+  }
+}

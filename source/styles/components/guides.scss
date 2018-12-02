@@ -70,17 +70,17 @@
 
 
 .guides__head-best-wrap{
-  width: 820px;
   display: flex;
+  flex: 1;
 }
 .guides__head-best-img{
-  width: 530px;
+  width: 60%;
   height: 100%;
   margin-right: 20px;
   background: #5400ff;
 }
 .guides__head-best-info{
-  width: 270px;
+  width: 40%;
 }
 .guides__head-best-info-name{
   color: #040404;

@@ -25,6 +25,7 @@ body{
     position: relative;
     min-height: 100%;
     overflow: hidden;
+    min-width: 300px;
 }
 ul{
     padding: 0;
@@ -43,6 +44,16 @@ h1, h2, h3, h4, h5{
 *{
     box-sizing: border-box;
 }
+.container__full{
+    margin: 0 auto;
+    width: 1310px;
+    @include desktoplg{
+        width: 95%;
+    }
+}
+.flex{
+    display: flex;
+}
 .container__fluid{
     width: 1150px;
     margin: 0 auto;
@@ -58,7 +69,7 @@ h1, h2, h3, h4, h5{
     }
 }
 .container{
-    width: 765px;
+    width: 745px;
     margin: 0 auto;
     @include tablet{
         width: 90%;

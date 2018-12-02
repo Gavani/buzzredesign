@@ -19,6 +19,7 @@ block content
       .rankings__hero-head-text
         h2 Best Product Rankings Across The Categories
       .rankings__hero-search
+        span.rankings__hero-search-text Start typing category name... Try "Bedsheets"
         label.rankings__hero-search-label
           input(type="search", name="search", placeholder='Start typing category name....Try "Bedsheets" ')
           span.rankings__hero-search-icon
@@ -29,7 +30,7 @@ block content
         include ../modules/menu.pug
         +menu
   section.rankings__top
-    .container__fluid
+    .container__full
       ul.rankings__top-list
         li.rankings__top-item.btn
           a(href="#").rankings__top-links

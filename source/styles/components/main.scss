@@ -14,6 +14,10 @@
     justify-content: center;
     align-items: center;
   }
+  @include tablet{
+    background: #fff !important;
+    height: auto;
+  }
 }
 @keyframes imgroll{
   0%{background-position: 0% 1% ;}
@@ -25,12 +29,21 @@
   padding: 50px 60px;
   background: #ffffff;
   box-shadow: 0 30px 60px 12px rgba(50,50,93,.25), 0 18px 36px 18px rgba(0,0,0,.3);
+  @include tablet{
+    width: 100%;
+    box-shadow: 0 0 0 0;
+    padding: 20px 0;
+  } 
 }
 .search__select-head{
   color: #ff3412;
   font-size: 30px;
   @include latobold;
   margin-bottom: 10px;
+
+  @include tablet{
+    color: #555555;
+  }
 }
 .search__select-info{
   font-size: 18px;
@@ -42,6 +55,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+
+  @include tablet{
+    flex-direction: column;
+    align-items: flex-start;
+  } 
 }
 .search__select-label{
   width: 235px;
@@ -62,6 +80,12 @@
     option{
       cursor: pointer;
     }
+  }
+
+  @include tablet{
+    margin-bottom: 10px;
+    width: 95%;
+    margin-right: 5%;
   }
 }
 .search__select-button{
@@ -85,6 +109,9 @@
   padding: 85px 0;
   @include laptop{
     padding-bottom: 10px;
+  }
+  @include tablet{
+    padding: 10px 0;
   }
 }
 
@@ -124,6 +151,9 @@
   @include laptop{
     margin-bottom: 10px;
   }
+  @include tablet{
+    width: 70px;
+  }
   @include phone{
     margin: 0 0 10px 0;
   }
@@ -137,7 +167,16 @@
       font-size: 32px;
       margin-bottom: 10px;
       text-transform: uppercase;
+      @include phone{
+        font-size: 24px;
+      }
     }
+    @include phone{
+      font-size: 18px;
+    }
+  }
+  @include tablet{
+    width: 90%
   }
 }
 
@@ -182,6 +221,9 @@
     width: 256px;
     margin-bottom: 50px;
   }
+  @include tablet{
+    margin-bottom: 30px;
+  }
   @include phone{
     width: 155px;
     margin-left: 10px;
@@ -204,6 +246,9 @@
   margin: 0 auto;
   width: 160px;
   padding-bottom: 20px;
+  @include tablet{
+    text-align: center;
+  }
   @include phone{
     width: 100%;
     padding-bottom: 10px;
@@ -211,6 +256,10 @@
 }
 .how__item-img-pic{
   width: 100%;
+
+  @include tablet{
+    width: 70%;;
+  }
 }
 .how__item-info{
   @include latobold;
@@ -504,6 +553,9 @@
   @include laptop{
     padding: 50px 0;
   }
+  @include phone{
+    padding: 25px 0;
+  }
 }
 .buzz-deals-img__wrap{
   display: flex;
@@ -548,11 +600,20 @@
       }
     }
   }
+  @include laptop{
+    padding: 25px 0 50px 0;
+  }
 }
 
 .buzz-deals__wrap{
   display: flex;
   margin-left: 75px;
+
+  @include laptop{
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
 }
 .buzz-deals__img{
   width: 510px;
@@ -561,23 +622,34 @@
   img{
     max-width: 100%;
   }
+  @include laptop{
+    width: 80%;
+    margin: 0 auto 20px auto;
+  }
 }
 
 .buzz-deals__text{
   width: 320px;
+
+  @include laptop{
+    width: 100%;
+    text-align: center;
+  }
 }
 .buzz-deals__text-head{
   font-size: 28px;
   @include latobold;
   color: #feffff;
   margin-bottom: 20px;
+
+  @include phone{
+    font-size: 22px;
+  }
 }
 .buzz-deals__text-button {
-  display: block;
   width: 100%;
   a{
     display: block;
-    width: 100%;
     padding: 20px 25px;
     background: #ffaa00;
     color: #600117;
@@ -590,11 +662,21 @@
     &:hover{
       background: #e69a00;
     }
+
+    @include laptop{
+      display: inline-block;
+      padding: 15px 20px;
+      font-size: 18px;
+    }
   }
 }
 .buzz-deals__text-footer{
   display: flex;
   align-items: center;
+
+  @include laptop{
+    justify-content: center;
+  }
 }
 .buzz-deals__text-footer-img{
   width: 50px;
@@ -606,7 +688,13 @@
 .buzz-deals__text-footer-info{
   width: 200px;
   color: #feef01;
-  font-weight: 600;
+  @include latobold;
+
+  @include laptop{
+    width: 150px;
+    font-size: 14px;
+    text-align: left;
+  }
 }
 
 
@@ -614,6 +702,9 @@
   padding: 80px 0;
   @include laptop{
     padding: 50px 0;
+  }
+  @include tablet{
+    padding: 25px 0;
   }
 }
 .buzz-reviews-img__wrap{
@@ -767,6 +858,11 @@
     &:hover{
       border-bottom-color: transparent;
     }
+
+    @include phone{
+      font-size: 13px;
+      border-bottom-width: 1px;
+    }
   }
 }
 
@@ -776,6 +872,9 @@
   padding: 80px 0;
   @include laptop{
     padding: 50px 0;
+  }
+  @include tablet{
+    padding: 25px 0;
   }
 }
 .buzz-alerts-img__wrap{
@@ -1055,6 +1154,9 @@
     }
     @include phone{
       font-size: 14px;
+    }
+    @include minphones{
+      font-size: 13px;
     }
   }
   @include phone{

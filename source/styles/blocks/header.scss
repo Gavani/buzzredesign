@@ -1,6 +1,15 @@
 .header{
   padding: 20px 0; 
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  position: relative;
+  z-index: 1;
+  .container__fluid{
+    width: 95%;
+  }
+
+  @include desktop{
+    padding: 15px 0;
+  }
 }
 .header__nav{
   display: flex;
@@ -9,6 +18,13 @@
 .nav__logo{
   width: 155px;
   margin-right: 40px;
+  @include desktop{
+    width: 140px;
+    margin-right: 20px;
+  }
+  @include laptop{
+    width: 160px;
+  }
   img{
     max-width: 100%;
   }
@@ -16,9 +32,17 @@
 .nav__list{
   display: flex;
   align-items: center;
+
+  @include laptop{
+    display: none;
+  }
 }
 .nav__item{
   margin-right: 40px;
+
+  @include desktop{
+    margin-right: 20px;
+  }
 }
 .nav__link{
   font-size: 18px;
@@ -34,6 +58,10 @@
   &:hover{
     border-bottom-color: #ff0054;
   }
+
+  @include desktop{
+    font-size: 15px;
+  }
 }
 .nav__item_active{
   .nav__link{
@@ -41,7 +69,14 @@
   }
 }
 .nav__serch{
-  width: 265px;
+  width: 400px;
+  @include desktoplg{
+    width: 240px;
+  }
+  @include laptop{
+    display: none;
+  }
+  margin-left: auto;
   input{
     margin: 0;
     width: 100%;
@@ -50,6 +85,10 @@
     height: auto;
     &:focus{
       border: 2px  solid #00007f;
+    }
+
+    @include desktop{
+      padding: 5px 40px 5px 10px;
     }
   }
 }
@@ -63,4 +102,54 @@
   margin-right: 15px;
   color: #7f7f7f;
   font-size: 22px;
+
+  @include desktop{
+    font-size: 20px;
+  }
+}
+
+.nav__hamburger{
+  display: none;
+  margin-right: 30px;
+  @include laptop{
+    display: block;
+  }
+  @include minphones{
+    margin-right: 15px;
+  }
+}
+.nav__hamburger-icon{
+  font-size: 30px;
+  @include minphones{
+    font-size: 26px;
+  }
+}
+.nav__search-mobile{
+  margin-left: auto;
+  margin-right: 30px;
+  display: none;
+
+  @include laptop{
+    display: block;
+  }
+  @include minphones{
+    margin-right: 15px;
+  }
+}
+.nav__search-mobile-icon{
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  border-radius: 3px;
+  color: #333333;
+  box-shadow: 0 4px 10px rgba(50,50,93,.21);
+  @include minphones{
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }

@@ -1,0 +1,54 @@
+.tooltips-container{
+  position: relative;
+}
+.tooltips{
+  position: absolute;
+  width: 125%;
+  padding: 20px 30px;
+  border-radius: 30px;
+  background: #0046d4;
+  bottom: 100%;
+  margin-bottom: 30px;
+  left: 0;
+  transform: translateX(-40%);
+  display: none;
+
+  &:after{
+    content: "";
+    position: absolute;
+    left: 85%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 2rem solid transparent;
+    border-top-color: #0046d4;
+    border-bottom-width: 0;
+    border-left-width: 1.35rem;
+    border-right-width: 1.35rem;
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    top: 100%;
+    left: 0;
+  }
+}
+.tooltips__text, .tooltips__link{
+  display: inline-block;
+  color: #fefeff;
+}
+.tooltips__text{
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.tooltips__link{
+  text-decoration: none;
+  @include latobold;
+  font-size: 15px;
+  margin-bottom: 20px;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}

@@ -4,6 +4,11 @@
   padding: 50px 0;
   .container__fluid{
     display: flex;
+    width: 95%;
+
+    @include tablet{
+      flex-direction: column;
+    }
   }
 }
 .footer__left{
@@ -19,6 +24,17 @@
     height: 100%;
     background: #fff;
     left: 100%;
+  }
+  @include tablet{
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 30px;
+    &:before{
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 100%;
+    }
   }
 }
 .footer__left-text{
@@ -56,9 +72,14 @@
 .footer__right{
   width: 55%;
   padding-left: 5%;
+  margin-top: auto;
+  @include tablet{
+    padding-left: 0;
+    padding-top: 30px;
+    width: 100%;
+  }
 }
 .footer__right-text{
-  margin-top: auto;
 
   h3{
     text-transform: uppercase;

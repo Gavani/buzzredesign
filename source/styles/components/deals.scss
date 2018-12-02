@@ -61,7 +61,8 @@
   }
 }
 .deals__aside{
-  width: 300px;
+  width: 25%;
+  min-width: 270px;
   margin-right: 40px;
 }
 .deals__aside-head{
@@ -169,7 +170,8 @@
 
 
 .deals__cards{
-  width: 810px;
+  width: 75%;
+  flex: 1;
 }
 .deals__cards-head{
   display: flex;
@@ -220,6 +222,7 @@
   position: relative;
 }
 .deals__cards-item-img{
+  width: 23%;
   padding-right: 20px;
   position: relative;
 
@@ -252,12 +255,12 @@
 }
 .deals__cards-item-left{
   padding-left: 20px;
-  width: 598px;
+  width: 75%;
   display: flex;
   flex-wrap: wrap
 }
 .deals__cards-item-info{
-  width: 300px;
+  width: 50%;
   padding-right: 20px;
   position: relative;
   margin-bottom: 3px;
@@ -298,7 +301,9 @@
 
 
 .deals__cards-item-rs{
+  width: 50%;
   padding-left: 20px;
+  margin-bottom: 20px;
 }
 .deals__cards-item-rs-30{
   margin-bottom: 10px;
@@ -347,9 +352,11 @@
 .deals__cards-item-price{
   display: flex;
   align-items: center;
+  width: 100%;
+  min-width: 455px;
 }
 .deals__cards-item-price-history{
-  width: 450px;
+  width: 80%;
   border: 1px solid #7e7e7e;
   padding: 10px;
 

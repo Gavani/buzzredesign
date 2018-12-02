@@ -29,6 +29,12 @@
     }
 }
 
+//PC-lagrge
+@mixin desktoplg{
+    @media screen and (max-width: 1400px){
+        @content;
+    }
+}
 //PC
 @mixin desktop{
     @media screen and (max-width: 1200px){

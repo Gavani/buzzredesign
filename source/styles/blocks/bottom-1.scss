@@ -1,5 +1,8 @@
 .buzz-bottom-first-img__section{
   padding: 60px 0;
+  @include tablet{
+    padding: 30px 0;
+  }
 }
 .buzz-bottom-first-img__wrap{
   display: flex;
@@ -8,6 +11,9 @@
 
   .head-inline__img{
     width: 100px;
+    @include tablet{
+      width: 70px;
+    }
   }
   .head-inline__text{
     width: 200px;
@@ -25,7 +31,7 @@
   .container{
     position: relative;
     display: flex;
-    &::before{
+    &:before{
       @include centered(x);
       bottom: 100%;
       content: "";
@@ -40,6 +46,10 @@
         display: none;
       }
     }
+
+    @include tablet{
+      flex-direction: column;
+    }
   }
 }
 .buzz-bottom-first__img{
@@ -49,13 +59,44 @@
   margin-right: 50px;
 
   img{
-    max-height: 100%;
     max-width: 200px;
+    @include tablet{
+      max-width: 100px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  @include laptop{
+    width: 40%;
+  }
+  @include tablet{
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.buzz-bottom-first__img-mobile-text{
+  display: none;
+  font-size: 32px;
+  @include latobold;
+  text-align: left;
+  color: #000100;
+  line-height: 1.2;
+  @include tablet{
+    display: block;
   }
 }
 
 .buzz-bottom-first__text{
   width: 400px;
+  @include laptop{
+    width: 45%;
+  }
+  @include tablet{
+    width: 100%; 
+  }
 }
 .buzz-bottom-first__text-head{
   color: #030403;
@@ -64,6 +105,9 @@
     &:first-child{
       font-size: 28px;
       margin-bottom: 10px;
+      @include tablet{
+        display: none;
+      }
     }
     &:last-child{
       font-size: 18px;
@@ -81,6 +125,14 @@
   span{
     &:first-child{
       margin-right: 15px;
+      @include tablet{
+        display: none; 
+      }
+    }
+    &:last-child{
+      @include tablet{
+        font-size: 16px;
+      }
     }
   }
 }
@@ -105,17 +157,37 @@
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 10px;
+
+      @include tablet{
+        font-size: 16px;
+      }
     }
     &:last-child{
       color: #474702;
       font-size: 15px;
+
+      @include tablet{
+        font-size: 13px;
+        @include latobold;
+      }
     }
   }
   &:hover{
     background: #f1f102;
   }
+  @include tablet{
+    padding: 10px;
+  }
 }
 .buzz-bottom-first__text-bottom{
   color: #062911;
   font-weight: bold;
+}
+
+.buzz-bottom-first__img-mobile-text{
+  display: none;
+
+  @include tablet{
+    display: block;
+  }
 }

@@ -1,0 +1,132 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Buzzguide - Price History Philips QT4011";
+  
+block content
+  include ../modules/header.pug
+  +header('index')
+  section.rankings__breadcrumbs.price-individual-product__breadcrumbs
+    .container__fluid
+      ul.rankings__breadcrumbs-list
+        li.rankings__breadcrumbs-item
+          a(href="#").rankings__breadcrumbs-link Price History Check
+          span.rankings__breadcrumbs-devide >>
+        li.rankings__breadcrumbs-item.rankings__breadcrumbs-item_active
+          span.rankkings__breadcrumbs-span Fujitsu AA555 Laptop - Intel i3 processor, 8 hours battery life, german.....
+      .price-individual-product__breadcrumbs-button
+        a(href="#").btn Back to search
+  section.price-individual-product__hero
+    .container__fluid
+      .price-individual-product__hero-head
+        p Price History, Ranking, Price Alert
+      .price-individual-product__card-wrapp
+        .price-individual-product__card-head
+          .price-individual-product__card-head-img
+            img(src="assets/img/contents/product.jpg", alt="Product Image")
+          .price-individual-product__card-head-info
+            .price-individual-product__card-head-info-name
+              p Philips QT4011 Trimmer with cordless & corded use
+            .price-individual-product__card-head-info-rating
+              span.text-red 4.3 
+              | rating, From 
+              span.text-red 11333 
+              | Amazon reviews
+            .price-individual-product__card-head-info-rs
+              p  Rs 34333 on Amazon
+        .price-individual-product__card-body
+          .price-individual-product__card-body-left
+            .price-individual-product__card-body-head
+              .price-individual-product__card-body-head-text
+                p Amazon Price History
+              .price-individual-product__card-body-head-update
+                p Last update: 07-Nov, 2018 (08:39 AM)
+            .price-individual-product__card-body-price-wrap
+              include ../modules/card-price
+              +priceHistory
+            .price-individual-product__card-body-price-info
+              .price-individual-product__card-body-price-info-lowest
+                p Lowest price in 30 days: Rs.343424
+              .price-individual-product__card-body-price-info-highest
+                p Highest price in 30 days: Rs. 343424
+              .price-individual-product__card-body-price-info-change
+                p Price Change Today Comapred to 30 days back: Rs.343434 (43%)
+              .price-individual-product__card-body-price-info-btn
+                a(href="#").btn Check Current Price On Amazon
+          .price-individual-product__card-body-right
+            .price-individual-product__card-body-right-head
+              p Ranking In trimmers
+            .price-individual-product__card-body-right-body
+              .price-individual-product__card-body-right-body-tooltips-wrap
+                .price-individual-product__card-body-right-body-tooltips.tooltips-container
+                  div.price-individual-product__card-body-right-body-tooltips-text Value for money rank: #6
+                    .tooltips
+                      span.tooltips__text It's overall best rank in trimmers on Amazon as estimated by our algorithm based on last 90 days data. Not availbale for new products or for products with too few sales
+                      a(href="#").tooltips__link Overall Best Ranked Trimmers On Amazon >
+                .price-individual-product__card-body-right-body-tooltips.tooltips-container
+                  div.price-individual-product__card-body-right-body-tooltips-text Highest rating rank: #1
+                    .tooltips
+                      span.tooltips__text It's overall best rank in trimmers on Amazon as estimated by our algorithm based on last 90 days data. Not availbale for new products or for products with too few sales
+                      a(href="#").tooltips__link Overall Best Ranked Trimmers On Amazon >
+                .price-individual-product__card-body-right-body-tooltips.tooltips-container
+                  div.price-individual-product__card-body-right-body-tooltips-text Highest selling rank: #34
+                    .tooltips
+                      span.tooltips__text It's overall best rank in trimmers on Amazon as estimated by our algorithm based on last 90 days data. Not availbale for new products or for products with too few sales
+                      a(href="#").tooltips__link Overall Best Ranked Trimmers On Amazon >
+                .price-individual-product__card-body-right-body-tooltips.tooltips-container
+                  div.price-individual-product__card-body-right-body-tooltips-text Fastest selling rank: #34
+                    .tooltips
+                      span.tooltips__text It's overall best rank in trimmers on Amazon as estimated by our algorithm based on last 90 days data. Not availbale for new products or for products with too few sales
+                      a(href="#").tooltips__link Overall Best Ranked Trimmers On Amazon >
+  section.price-individual-product__devider
+  section.price-individual-product__alert
+    .container__fluid
+      .price-individual-product__alert-left
+        .price-individual-product__alert-img
+          img(src="assets/img/contents/product.jpg", alt="Product Image")
+        .price-individual-product__alert-rs
+          p Rs.45445 Today on Amazon
+      .price-individual-product__alert-right
+        .price-individual-product__alert-head-text
+          p Set price Drop Alert to Philips QT4011 Trimmer with cordless & corded use
+        form.price-individual-product__alert-form
+          .price-individual-product__alert-form-fields
+            label.price-individual-product__alert-form-fields-rs
+              input(type="text", name="price", placeholder=" Enter your desired price")
+          .price-individual-product__alert-form-fields
+            label.price-individual-product__alert-form-fields-email
+              input(type="email", name="email" placeholder="Enter your email address")
+          .price-individual-product__alert-form-btn
+            button.btn
+              .price-individual-product__alert-form-btn-img
+              .price-individual-product__alert-form-btn-text Start Tracking
+        .price-individual-product__alert-info
+          .price-individual-product__alert-info-img
+            img(src="assets/img/decor/monkey.png", alt="Image")
+          .price-individual-product__alert-info-text
+            p We will tell you when the price drops to your desired price or lower
+        .price-individual-product__alert-links
+          .price-individual-product__alert-links-more
+            span Set more alerts on our  
+              a(href="#") Price Alerts Page >
+          .price-individual-product__alert-links-unsubscribe
+            span Unsubscribe any alert any time on our 
+              a(href="#") Unsubscribe Page >
+  section.price-individual-product__deals
+    .container
+      .price-individual-product__deals-img
+        img(src="assets/img/decor/giraffe.png", alt="Giraffe Image")
+      .price-individual-product__deals-info
+        .price-individual-product__deals-info-head
+          p Looking to buy Laptops?
+          p See all the genuine deals & overall best rankings of laptops
+        .price-individual-product__deals-info-links-wrap
+          .price-individual-product__deals-info-links
+            a(href="#").btn See 100% genuine price drops >
+          .price-individual-product__deals-info-links
+            a(href="#").btn See Rankings >
+  include ../modules/bottom-1
+  +bottom1
+  include ../modules/footer
+  +footer
+
