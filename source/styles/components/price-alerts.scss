@@ -1,10 +1,19 @@
 .alerts__breadcrumbs{
   background: #3800aa !important;
+
+  @include laptop{
+    background: #8d00d4 !important;
+  }
 }
 .alerts__hero{
   background: #5400ff;
   padding: 50px 0;
   display: flex;
+  @include laptop{
+    background: #ffffff;
+    flex-wrap: wrap;
+    padding: 20px 0 0 0;
+  }
 }
 .alerts__hero-img{
   width: 555px;
@@ -12,9 +21,20 @@
   img{
     max-width: 100%;
   }
+  @include laptop{
+    order: 2;
+    width: 97%;
+    margin: 0 auto;
+  }
 }
 .alerts__hero-wrap{
   width: 600px;
+  margin-right: 35px;
+
+  @include laptop{
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 
 .alerts__hero-head-text{
@@ -26,20 +46,51 @@
     color: #fe9c5d;
     line-height: 1.2;
   }
+  @include laptop{
+    width: 100%;
+    p{
+      color: #717171;
+    }
+  }
 }
 
 .alerts__hero-form{
+  .alerts-mobile{
+    display: none;
+    font-size: 17px;
+    @include latobold;
+    color: #717171;
+    @include laptop{
+      display: block;
+    }
+  }
   .buzz-alerts__form-fields{
     margin-bottom: 20px;
+  }
+  .buzz-alerts__form-fields_flex{
+    @include laptop{
+      flex-wrap: wrap;
+    }
   }
   .buzz-alerts__form-fields-label{
     input{
       padding-left: 55px;
+      @include laptop{
+        padding-left: 20px;
+      }
     }
     &:before{
       background: #ffff00;
       width: 42px;
       height: 42px;
+    }
+    @include laptop{
+      width: 100%;
+      margin-bottom: 20px;
+
+      &::before{
+        display: none;
+      }
     }
   }
   .buzz-alerts__form-input{
@@ -54,6 +105,14 @@
     &:focus{
       border: 2px solid #d4bfff;
       background: transparent;
+    }
+
+    @include laptop{
+      border: 2px solid #5400ff;
+      color: #252525;
+      &:focus{
+        border: 2px solid #5400ff;
+      }
     }
   }
 }
@@ -75,12 +134,20 @@
   color: #b0fe2e;
   @include latobold;
   font-size: 14px;
+
+  @include laptop{
+    margin-bottom: 10px;
+    color: #090909;
+  }
 }
 
 .alerts__unsubscribe{
   padding: 50px 0;
   background: #0038aa;
   text-align: center;
+  @include tablet{
+    padding: 25px 0;
+  }
 }
 
 .alerts__unsubscribe-head-text{
@@ -88,6 +155,10 @@
   color: #fefeff;
   @include latobold;
   margin-bottom: 10px;
+
+  @include phone{
+    font-size: 15px;
+  }
 }
 .alerts__unsubscribe-link{
   a{
@@ -101,6 +172,9 @@
 
     &:hover{
       background: #e49800;
+    }
+    @include laptop{
+      padding: 10px 20px;
     }
   }
 }
@@ -136,6 +210,10 @@
   background: #fff;
   display: flex;
   padding: 20px ;
+
+  @include tablet{
+    width: 100%;
+  }
 }
 .alerts__famous-item-img{
   width: 40%;

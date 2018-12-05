@@ -1,0 +1,13 @@
+mixin phoneSearch (additionClass)
+  .header__search-phone-wrap
+    .header__search-phone-head
+      label.header__search-phone-label
+        input(type="text" placeholder="What are you looking to buy today?").header__search-phone-input
+        button.header__search-phone-icon X
+      .header__search-phone-cancel 
+        span Cancel
+    .header__search-phone-body
+      ul.header__search-phone-list
+        each item in ['Philips QT4011 Beard Trimmer - See price history & ranking', 'Canon EOS 1300D DSLR Camera - See price history & ranking', 'Laptops - See Best Deals & Rankings Of Laptops', 'Mixer Grinders - See Best Deals & Rankings Of Mixer Grinders']
+          li.header__search-phone-item
+            a(href="#").header__search-phone-link= item

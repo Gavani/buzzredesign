@@ -17,8 +17,9 @@ mixin header (additionClass)
         .nav__search-mobile
           .nav__search-mobile-icon
             i(class="fas fa-search")
+          include phone-search
+          +phoneSearch
         .nav__hamburger
           .nav__hamburger-icon
             i(class="fas fa-bars")
-
         

@@ -53,6 +53,16 @@ block variables
       ];
 
 block content
+  .notification-bar
+    .notification-bar__text-wrap
+      .notification-bar__text-img
+        img(src="assets/img/decor/monkey.png", alt="Monkey")
+      .notification-bar__text
+        span Hey! We just updated Amazon Great Indian Festival special deals. 
+        a(href="#") Visit our deals page >
+    .notification-bar__close-icon
+      i(class="fas fa-times")
+
   include ../modules/header.pug
   +header('index')
   section.hero(style="background: url('assets/img/backgrounds/desk-3139127.jpg')")
@@ -64,17 +74,17 @@ block content
           label.search__select-label
             p Select Category
             select.search__select-category
-              option(value="All") All
-              option(value="Category") Category
-              option(value="Category") Category
-              option(value="Category") Category
-              option(value="Category") Category
-              option(value="Category") Category
+              option(value="0") All
+              option(value="1") Category
+              option(value="2") Category
+              option(value="3") Category
+              option(value="4") Category
+              option(value="5") Category
           label.search__select-label
             p See
             select.search__select-see
-              option(value="See 100% Genuine Deals") See 100% Genuine Deals
-              option(value="See") See
+              option(value="0") See 100% Genuine Deals
+              option(value="1") See
         .search__select-button
           a.btn(href="#") See Now >
   section.how__section
@@ -612,3 +622,18 @@ block content
   +bottom1
   include ../modules/footer.pug
   +footer
+  .select-links
+    .select-links__1
+      a(href="12312312")
+      a(href="dsfsdfsd")
+      a(href="3")
+      a(href="4")
+      a(href="5")
+      a(href="6")
+    .select-links__2
+      a(href="7")
+      a(href="8")
+      a(href="9")
+      a(href="10")
+      a(href="11")
+      a(href="12")

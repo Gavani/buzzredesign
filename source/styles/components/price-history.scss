@@ -1,7 +1,26 @@
+.price-history__breadrumbs{
+  @include laptop{
+    background: #8d00d4 !important;
+  }
+}
+.label-text__mobile{
+  display: none;
+  @include latobold;
+  font-size: 15px;
+  color: #717171;
+
+  @include laptop{
+    display: block;
+  }
+}
 .price-history__hero{
   .rankings__hero-head-text{
     margin-bottom: 10px;
     color: #fe9c5d;
+
+    @include laptop{
+      color: #717171;
+    }
   }
   .rankings__hero-head-text, .rankings__hero-search{
     text-align: left;
@@ -15,16 +34,41 @@
     input{
       padding-top: 15px;
       padding-bottom: 15px;
+      @include laptop{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .rankings__hero-search-icon{
+      @include laptop{
+        top: 100% !important;
+        margin-top: -27px;
+      }
     }
   }
   .rankings__hero-text{
     color: #c5feb1;
+
+    @include laptop{
+      color: #040404;
+    }
   }
   .rankings__hero-category-text{
     color: #feb45d;
+    @include laptop{
+      text-align: left;
+      color: #040404;
+    }
   }
   .rankings__hero-category{
     margin-top: -8.5rem;
+    @include laptop{
+      margin-top: 0;
+    }
+  }
+
+  @include laptop{
+   background: #ffffff; 
   }
 }
 .price-history__hero-attention{
@@ -34,6 +78,13 @@
     @include latobold;
     font-size: 14px;
     color: #a4db4b;
+    @include laptop{
+      color: #909801;
+    }
+  }
+  @include laptop{
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 .price-history__devider{
@@ -52,16 +103,27 @@
     background: #373737;
     margin-top: -2px;
   }
+  @include laptop{
+    padding: 1px 0;
+  }
 }
 .price-history__drops{
   padding: 30px 0 50px 0;
   background: #e7e7e7;
+
+  @include laptop{
+    background: #ffffff;
+    padding: 30px 0 10px 0;
+  }
 }
 .price-history__drops-head{
   width: 675px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 50px;
+  @include laptop{
+    width: 100%;
+  }
 }
 .price-history__drops-head-text {
   margin-bottom: 10px;
@@ -69,6 +131,9 @@
     font-size: 24px;
     @include latobold;
     color: #0141ec;
+    @include laptop{
+      font-size: 18px;
+    }
   }
 }
 .price-history__drops-head-update{
@@ -79,6 +144,10 @@
     font-size: 14px;
     @include latobold;
     color: #fefefe;
+    @include minphones{
+      padding: 7px;
+      font-size: 13px;
+    }
   }
 }
 .price-history__drops-cards{
@@ -94,6 +163,15 @@
   }
   .ribbon{
     z-index: 2;
+  }
+  @include laptop{
+    width: 100%;
+  }
+
+  .deals__cards-item-pic{
+    @include laptop{
+      width: 100%;
+    }
   }
 }
 .price-history__drops-footer{

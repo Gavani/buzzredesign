@@ -19,6 +19,11 @@
       font-size: 14px;
     }
   }
+  @include tablet{
+    a, span{
+      font-size: 12px;
+    }
+  }
 }
 .rankings__breadcrumbs-link{
   color: #fefeff;
@@ -144,18 +149,26 @@
   @include desktop{
     color: #2c2a32;
   }
+  @include laptop{
+    margin-bottom: 10px;
+  }
 }
 .rankings__hero-category{
   width: 850px;
-  position: absolute;
   @include centered(x);
   top: 100%;
   margin-top: -120px;
   border-radius: 10px;
   box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
-
+  
   @include laptop{
-    display: none;
+    position: relative;
+    transform: translate(0 ,0);
+    margin-top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 0 0 ;
+    background: #8d00d4;
   }
 }
 

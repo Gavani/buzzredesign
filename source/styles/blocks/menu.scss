@@ -9,8 +9,29 @@
   @include desktop{
     box-shadow: -3px 2px 5px 0px #d0d0d0;
   }
+  @include laptop{
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
+    background: #8d00d4;
+    width: 100%;
+  }
 }
 .header__menu-dropdown-wrap-list{
+  .tabs__item_active{
+    @include laptop{
+      .header__menu-dropdown-wrap-link{
+        color: #fffeff !important;
+        font-size: 18px;
+        @include lato;
+  
+        &:after{
+          content: "[ - ]";
+          font-size: 18px;
+          @include lato;
+        }
+      }
+    }
+  }
   .header__menu-dropdown-wrap-item{
     &:first-child{
       padding-top: 10px;
@@ -21,6 +42,26 @@
       margin-bottom: 10px;
     }
   }
+  @include laptop{
+    .header__menu-dropdown-wrap-item{
+      &:first-child{
+        padding-top: 0;
+        margin-top: 0;
+      }
+      &:last-child{
+        padding-bottom: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .tabs__item{
+    border-width: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  .tabs__item_active{
+    background: transparent !important;
+  }
 }
 .header__menu-dropdown-wrap-link{
   display: block;
@@ -28,36 +69,97 @@
   color: #a5a5a5;
   transition: .2s linear;
   @include lato;
+  @include laptop{
+    color: #fffeff;
+    font-size: 18px;
+    position: relative;
+    @include lato;
+    padding: 19px 10px;
+    &:after{
+      content: "+";
+      display: block;
+      font-size: 32px;
+      color: #fffeff;
+      @include centered(y);
+      right: 0;
+      margin-top: -1px;
+      margin-right: 10px;
+      line-height: 1;
+    }
+  }
 }
 .header__menu-dropdown-wrap-item{
   width: 240px;
   cursor: pointer;
   padding: 17px 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 10px !important;
 
   &:hover{
     background: #f5f5f5 !important;
     .header__menu-dropdown-wrap-sub-list{
       display: flex;
+      @include laptop{
+        display: block;
+      }
     }
     .header__menu-dropdown-wrap-link{
-      font-weight: bold;
+      @include latobold;
       color: #333333;
+      @include laptop{
+        color: #fffeff;
+        @include lato;
+      }
     }
   }
-  @include desktop{
-    padding: 19px 10px !important;
+  @include laptop{
+    padding: 0 !important;
+    width: 100%;
+    margin: 0;
+    &:hover{
+      background: #8d00d4 !important;
+    }
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #d7c0e3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 62px;
+      z-index: 200;
+    }
+  }
+  .tabs__link-text{
+    display: block;
+    
+    @include laptop{
+      display: none;
+    }
   }
 }
 .header__menu-dropdown-wrap-item_active{
   background: #f5f5f5 !important;
   .header__menu-dropdown-wrap-sub-list{
     display: flex;
+    @include laptop{
+      display: block;
+    }
   }
   .header__menu-dropdown-wrap-link{
-    font-weight: bold;
+    @include latobold;
     color: #333333;
+    @include laptop{
+      color: #fffeff !important;
+      font-size: 18px;
+      @include lato;
+    }
+  }
+  @include laptop{
+    background: #8d00d4 !important;
   }
 }
 .header__menu-dropdown-wrap-sub-list{
@@ -102,13 +204,61 @@
 
   @include desktop{
     width: 598px;
-    height: 551px;
+    height: 501px;
     box-shadow: 3px 3px 5px -1px #d0d0d0;
+  }
+  @include laptop{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #8d00d4;
+    box-shadow: 0 0 0 0;
+    margin-left: 0;
+    padding: 10px 20px 20px 20px;
+    display: block;
+    &:before, &:after{
+      display: none;
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #e3dfe6;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin: 0;
+      z-index: 0;
+      padding: 0;
+    }
+  }
+  .header__menu-dropdown-wrap-sub-item{
+    &:last-child{
+      @include laptop{
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .header__menu-dropdown-wrap-sub-item{
   margin-bottom: 20px;
   margin-left: 20px;
+
+  @include laptop{
+    margin-left: 0;
+  }
+
+}
+.header__menu-dropdown-wrap-sub-item_list-item{
+  @include laptop{
+    a{
+      color: #fffeff;
+      @include lato;
+      font-size: 18px;
+    }
+  }
 }
 .header__menu-dropdown-wrap-sub-item_list{
   .header__menu-dropdown-wrap-sub-item_list-item{
@@ -116,6 +266,11 @@
       color: #000000;
       font-weight: bold;
       margin-bottom: 5px;
+      @include laptop{
+        @include latobold;
+        color: #f3fe12;
+        font-size: 19px;
+      }
     }
   }
 }

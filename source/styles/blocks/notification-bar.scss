@@ -1,0 +1,48 @@
+.notification-bar{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px 5px 10px;
+  background: #ffaa00;
+}
+.notification-bar__text-wrap{
+  display: flex;
+  align-items: center;
+}
+.notification-bar__text-img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  img{
+    max-width: 100%;
+  }
+}
+.notification-bar__text{
+  font-size: 14px;
+  color: #1a1408;
+  flex: 1;
+  span{
+    margin-right: 4px;
+  }
+  a{
+    color: #1a1408;
+    font-size: 14px;
+
+    &:hover{
+      text-decoration: none;
+    }
+
+  }
+}
+.notification-bar__close-icon{
+  cursor: pointer;
+  @include centered(y);
+  right: 0;
+  margin-right: 20px;
+  font-size: 20px;
+  @include phone{
+    margin-right: 10px;
+  }
+}

@@ -13,6 +13,8 @@ html(lang="en")
         link(rel="stylesheet", href="assets/styles/foundation.css")
         link(rel="stylesheet", href="assets/styles/app.css")
     body
+        include modules/phone-menu
+        +phoneMenu
         .wrapper
             block content
         script(src="assets/js/foundation.js")

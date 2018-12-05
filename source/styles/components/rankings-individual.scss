@@ -82,7 +82,14 @@
 .rankings-individual__navigation{
   padding: 20px 0;
   background: #000000;
-
+  .container__full{
+    overflow: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  .container__full::-webkit-scrollbar { 
+    display: none; 
+  }
   @include laptop{
     padding: 20px 0 20px 0;
     background: #fff;
@@ -93,6 +100,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include laptop{
+    width: 660px;
+    justify-content: flex-start;
+  }
 }
 .rankings-individual__navigation-item{
   width: 130px;
@@ -102,10 +113,8 @@
     text-align: left;
   }
   @include laptop{
-    width: 65px;
-  }
-  @include phone{
-    width: 48px;
+    width: 80px;
+    margin-right: 30px;
   }
 }
 .rankings-individual__navigation-link{
@@ -128,12 +137,7 @@
     color: #333333;
     border-bottom: 2px solid transparent;
     padding-bottom: 10px;
-  }
-  @include laptop{
-    font-size: 14px;
-  }
-  @include phone{
-    font-size: 9px;
+    font-size: 15px;
     @include latobold;
   }
 }
@@ -308,7 +312,27 @@
   @include laptop{
     width: 40%;
     min-width: 120px;
-    padding: 20px 8px 20px 8px;
+    padding: 0 8px;
+    margin: 20px 0;
+  }
+}
+.rankings-individual__card-img-rank_phone{
+  display: none;
+  width: 100%;
+  background: #00aa38;
+  padding: 10px;
+  margin-bottom: 20px;
+  p{
+    font-size: 17px;
+    @include latobold;
+    color: #fefefe;
+    line-height: 1.2;
+    &:first-child{
+      font-size: 28px;
+    }
+  }
+  @include laptop{
+    display: block;
   }
 }
 .rankings-individual__card-pic{
@@ -509,25 +533,68 @@
   display: none;
   @include laptop{
    display: block; 
-  } 
-}
-.rankings-individual__card-price-phone-head{
-  padding: 15px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #5400ff;
-  color: #fefefe;
-  font-size: 18px;
-  @include latobold;
-  cursor: pointer;
-
-  span{
-    &:first-child{
-      margin-right: 10px;
+  }
+  
+  .tabs__item{
+    border-width: 0 !important;
+    .tabs__link{
+      font-size: 18px;
+      color: #fefefe;
+      @include latobold;
+      text-decoration: none;
+      display: block;
+      background: #5400ff;
+      padding: 10px 0;
+      @include latobold;
+      text-align: center;
+      cursor: pointer;
+      span{
+        font-size: 22px;
+        margin-left: 10px;
+        svg{
+          transition: .4s linear;
+          margin-bottom: -3px !important;
+        }
+      }
     }
-    &:last-child{
-      font-size: 22px;
+  }
+  
+  .tabs__item_active{
+    .tabs__link{
+      svg{
+        transform: rotate(180deg) !important;
+      }
+    }
+  }
+}
+.rankings-individual__card-price-phone-bottom{
+  padding: 0.625rem 1.25rem 1.25rem 1.25rem;
+  text-align: center;
+  a{
+    display: inline-block;
+    padding: 0.625rem;
+    font-size: 0.9375rem;
+    color: #fefefe;
+    background: #5757da;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+.rankings-individual__card-price-phone-wrap{
+  padding: 20px 10px 20px 10px;
+  .product__card-price-list{
+    @include laptop{
+      height: 270px;
+    }
+    @include minphones{
+      font-size: 12px;
+      margin-left: -10px;
+      height: 250px;
+    }
+  }
+  .product__card-price-item{
+    @include minphones{
+      margin-left: 10px;
     }
   }
 }

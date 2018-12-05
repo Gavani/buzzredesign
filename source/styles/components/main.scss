@@ -616,6 +616,9 @@
   }
 }
 .buzz-deals__img{
+  padding: 25px;
+  border-radius: 40px;
+  background: #fff;
   width: 510px;
   margin-right: 50px;
 
@@ -625,6 +628,10 @@
   @include laptop{
     width: 80%;
     margin: 0 auto 20px auto;
+  }
+  @include phone{
+    border-radius: 25px;
+    padding: 15px;
   }
 }
 
@@ -1205,4 +1212,8 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance:none;
+}
+
+.select-links{
+  display: none;
 }

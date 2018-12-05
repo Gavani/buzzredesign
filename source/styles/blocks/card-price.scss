@@ -40,6 +40,12 @@
       }
     }
   }
+  @include phone{
+    margin-left: -10px;
+  }
+  @include minphones{
+    font-size: 12px;
+  }
 }
 .product__card-price-item{
   display: flex;
@@ -47,6 +53,11 @@
   width: 140px;
   margin-left: 19px;
   @include latobold;
+
+  @include minphones{
+    margin-left: 10px;
+    width: 115px;
+  }
 }
 .product__card-price-date{
   margin-right: 10px;
